@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Pedaprolu S S L Katyayani</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f9ff; --card:#fff; --text:#1a1d2e; --muted:#6b7280;
+  --primary:#2563eb; --primary-light:#dbeafe; --border:#e5e7eb;
+}
+body.dark{
+  --bg:#0f172a; --card:#1e293b; --text:#f1f5f9; --muted:#94a3b8;
+  --primary:#60a5fa; --primary-light:#1e3a5f; --border:#334155;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);transition:.3s}
+nav{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:14px 6%;}
+.logo{font-weight:700;color:var(--primary)} .logo span{color:var(--text)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:14px} 
+nav a:hover,nav a.active{color:var(--primary)}
+.btn{padding:10px 22px;border-radius:30px;border:none;cursor:pointer;font-weight:600;transition:.3s}
+.btn-primary{background:var(--primary);color:#fff} .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,99,235,.3)}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+#darkBtn{border:1px solid var(--border);background:var(--card);padding:6px 14px;border-radius:20px;cursor:pointer;color:var(--text)}
+
+section{padding:70px 6%}
+.hero{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:30px;min-height:80vh}
+.hero-text h4{color:var(--primary);letter-spacing:3px;font-size:13px;margin-bottom:10px}
+.hero-text h1{font-size:52px;line-height:1.1;margin-bottom:12px}
+.hero-text p.subtitle{color:var(--primary);font-weight:600;margin-bottom:14px}
+.hero-text p.desc{color:var(--muted);max-width:500px;margin-bottom:22px;line-height:1.7}
+.hero-img{width:320px;height:320px;background:linear-gradient(135deg,var(--primary),#a78bfa);border-radius:30% 70% 30% / 30% 30% 70% 70%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:90px;font-weight:700;box-shadow:0 20px 40px rgba(37,99,235,.2)}
+
+.title{font-size:28px;margin-bottom:8px} .line{width:50px;height:4px;background:var(--primary);border-radius:2px;margin-bottom:30px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+.card{background:var(--card);border:1px solid var(--border);padding:24px;border-radius:16px}
+.edu-item{display:flex;justify-content:space-between;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--border)}
+.edu-item b{color:var(--text)} .edu-item span{color:var(--muted);font-size:14px}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.skill-card{text-align:center;padding:28px 10px}
+.skill-card h3{font-size:16px} .skill-card p{font-size:28px;margin-bottom:8px}
+
+.filter{display:flex;gap:10px;margin-bottom:25px}
+.filter button{padding:6px 18px;border-radius:20px;border:1px solid var(--border);background:var(--card);cursor:pointer;color:var(--text)}
+.filter button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.project h3{margin-bottom:8px} .project p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:10px}
+.tag{display:inline-block;background:var(--primary-light);color:var(--primary);font-size:11px;padding:4px 10px;border-radius:20px;margin-top:6px}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+input,textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);margin-top:6px;margin-bottom:12px;outline:none}
+input:focus,textarea:focus{border-color:var(--primary)}
+.details p{margin-bottom:14px} .details b{width:70px;display:inline-block}
+footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px;font-size:13px}
+@media(max-width:800px){.hero-text h1{font-size:36px}.about-grid,.contact-grid{grid-template-columns:1fr} nav ul{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">My Portfolio <span>_</span></div>
+  <ul>
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="darkBtn" onclick="document.body.classList.toggle('dark')">Dark Mode</button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h4>HELLO, I AM</h4>
+    <h1>Pedaprolu<br>S S L Katyayani</h1>
+    <p class="subtitle">Computer Science Engineering Student</p>
+    <p class="desc">I enjoy problem solving and I am interested in learning new technologies that help me turn simple ideas into useful projects.</p>
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="#contact" class="btn btn-outline" style="margin-left:10px">Contact Me</a>
+  </div>
+  <div class="hero-img">PK</div>
+</section>
+
+<section id="about">
+  <h2 class="title">About Me</h2><div class="line"></div>
+  <div class="about-grid">
+    <div class="card">
+      <p style="line-height:1.8;color:var(--muted)">I am a B.E. Computer Science Engineering student. I am currently focused on Bootstrap, Data Structures and Exploring AI. Looking for opportunities to learn,collaborate ad grow. From debugging to deployment, I enjoy the entire process. Check out my projects below.</p>
+    </div>
+    <div class="card" style="background:var(--primary);color:#fff;border:none">
+      <h3>Quick Info</h3><br>
+      <p>📍 Hyderabad, Telangana</p>
+      <p>🎓 Stanley College of Engineering & Technology for Women</p>
+      <p>💻 Frontend Developer - Learning</p> <br>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="title">Education</h2><div class="line"></div>
+  <div class="card">
+    <div class="edu-item"><div><b>B.E. CSE</b><br><span>Stanley College of Engineering & Technology for Women</span></div><span>2024 - Present</span></div>
+    <div class="edu-item"><div><b>Diploma</b><br><span>Government Institute of Electronics</span></div><span>2021 - 2024</span></div>
+    <div class="edu-item" style="border:none"><div><b>SSC</b><br><span>Balaji High School</span></div><span>2021</span></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="title">Skills</h2><div class="line"></div>
+  <div class="skills-grid">
+    <div class="card skill-card"><p>🌐</p><h3>HTML5</h3></div>
+    <div class="card skill-card"><p>🎨</p><h3>CSS3</h3></div>
+    <div class="card skill-card"><p>☕</p><h3>Java</h3></div>
+    <div class="card skill-card"><p>⚡</p><h3>JavaScript</h3></div>
+    <div class="card skill-card"><p>©️</p><h3>C</h3></div>
+    <div class="card skill-card"><p>🐍</p><h3>Python</h3></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="title">Projects</h2><div class="line"></div>
+  <div class="filter">
+    <button class="active" onclick="filterProject('all',this)">All</button>
+  </div>
+  <div class="projects-grid">
+    <div class="card project" data-type="python">
+      <h3>Virtual Keyboard</h3>
+      <p>A virtual keyboard implemented in python using handTracker, designed for touchscreen interaction and accessibility.</p>
+      <span class="tag">python</span>
+    </div>
+    <div class="card project" data-type="python">
+      <h3>Automated Report Generation</h3>
+      <p>An automated report generation tool built with Python, designed to streamline the process of creating and distributing reports.</p>
+      <span class="tag">python</span>
+    </div>
+    <div class="card project" data-type="web">
+      <h3>Machine Learning Model Implementation</h3>
+      <p>A simple implementation of a logic regression model using the statsmodels library.</p>
+      <span class="tag">python</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact Me</h2><div class="line"></div>
+  <div class="contact-grid">
+    <div class="card">
+      <label>Email</label><input type="email" id="email" placeholder="Enter your email"><small id="emailErr" style="color:red;display:none">Please enter a valid email</small>
+      <label>Message</label><textarea id="msg" rows="4" placeholder="Write your message"></textarea><small id="msgErr" style="color:red;display:none">Please enter a message</small>
+      <br><button class="btn btn-primary" onclick="sendMsg()">Send Message</button>
+    </div>
+    <div class="card details">
+      <h3>My Details</h3><br>
+      <p><b>Email:</b><span>psslkatyayani@gmail.com</span></p>
+      <p><b>Location:</b>  <span>Hyderabad, Telangana</span></p>
+      <p><b>GitHub:</b><span>github.com/sslkatyayani</span></p>
+      <p><b>LinkedIn:</b>  <span>linkedin.com/in/psslkatyayani</span></p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Pedaprolu S S L Katyayani<br> Made as part of Full Stack Development Assignment-1</footer>
+
+<script>
+function filterProject(type,btn){
+  document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project').forEach(p=>{
+    p.style.display = (type=='all' || p.dataset.type==type) ? 'block' : 'none';
+  });
+}
+function sendMsg(){
+  let e=document.getElementById('email').value, m=document.getElementById('msg').value;
+  let valid=/^\S+@\S+\.\S+$/.test(e);
+  document.getElementById('emailErr').style.display= valid?'none':'block';
+  document.getElementById('msgErr').style.display= m.trim()?'none':'block';
+  if(valid && m.trim()){alert('Message sent! Thank you.');}
+}
+</script>
+</body>
+</html>
