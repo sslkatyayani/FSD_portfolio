@@ -1,6 +1,6 @@
 # FSD_portfolio
 
-A responsive personal portfolio website to showcase my education, skills, and projects. Made as part of Full Stack Development Assignment-1.
+A responsive personal portfolio website to showcase my education, skills and projects. Made as part of Full Stack Development Assignment-1.
 
 ### Features
 - Responsive design for all devices
@@ -21,9 +21,9 @@ A responsive personal portfolio website to showcase my education, skills, and pr
 ###  Sections
 1.  **Home / Hero** - Introduction
 2.  **About Me** - Quick intro and info
-3.  **Education** - B.E. CSE, Diploma, SSC
+3.  **Education** - B.E , Diploma, SSC
 4.  **Skills** - HTML5, CSS3, Java, JavaScript, C, Python
-5.  **Projects** - Student Portfolio, To-Do List, College Event Page
+5.  **Projects** - virtual keyboard, Automated Report Generation, Machine Learning Model Implementation
 6.  **Contact** - Contact form and details
 
 ###  How to Run Locally
